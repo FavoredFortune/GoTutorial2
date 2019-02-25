@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"math"
 )
 
 func main() {
@@ -56,12 +57,17 @@ func reverse(x int) int {
 		fmt.Println(newInt)
 	}
 
+	//wasn't passing leetcode tests, because wasn't accounting for integer overflow. this is the fix
+	//check for integer overflows (https://stackoverflow.com/questions/33641717/detect-signed-int-overflow-in-go)
+	if newInt > math.MaxInt32 || newInt < math.MinInt32 {
+		return 0
+	}
+
 	return newInt
 }
 
 
 //alt solution: USE MODULUS! (after reading discussion on leetcode)
-
 func reverseTwo (x int) int {
 
 	sum :=0
@@ -70,5 +76,11 @@ func reverseTwo (x int) int {
 		sum = sum*10 +x%10
 		x = x/10
 	}
+
+	//also needed to pass
+	if sum > math.MaxInt32 || sum < math.MinInt32 {
+		return 0
+	}
+
 	return sum
 }
