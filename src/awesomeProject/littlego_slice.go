@@ -2,12 +2,31 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"sort"
 )
 
+//playing with code from the Little Book of Go
+//https://www.openmymind.net/assets/go/go.pdf
+
 func main() {
+	//for removeAtIndex - working with from start to end notation
 	source := []int{1,2,3,4,5}
 	source = removeAtIndex(source, 2)
 	fmt.Println(source)
+
+	//for instantiating slices and working with copy and sort as well as start to end notation
+	randomSlice := make([]int, 10)
+
+	for i := range randomSlice {
+		randomSlice[i] = int(rand.Int31n(10000))
+	}
+	sort.Ints(randomSlice)
+	fmt.Println(randomSlice)
+
+	worst := make([]int, 3)
+	copy(worst, randomSlice[:3])
+	fmt.Println(worst)
 }
 
 func removeAtIndex(source []int, index int) []int{

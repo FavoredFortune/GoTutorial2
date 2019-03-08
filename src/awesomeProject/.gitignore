@@ -50,13 +50,16 @@ fabric.properties
 # See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
 
 .idea/
+.idea/workspace.xml
 
 # Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
 
 *.iml
 modules.xml
 *.ipr
-
+/github.com
+/golang.org
+/gopkg.in
 
 ### MAC OSX ###
 .DS_Store
