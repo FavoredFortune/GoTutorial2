@@ -57,12 +57,12 @@ func reverse(x int) int {
 		fmt.Println(newInt)
 	}
 
+
 	//wasn't passing leetcode tests, because wasn't accounting for integer overflow. this is the fix
 	//check for integer overflows (https://stackoverflow.com/questions/33641717/detect-signed-int-overflow-in-go)
 	if newInt > math.MaxInt32 || newInt < math.MinInt32 {
 		return 0
 	}
-
 	return newInt
 }
 
