@@ -16,6 +16,7 @@ func main() {
 	fmt.Println(containsDuplicate(testInputD))
 
 }
+//original leetcode problem: https://leetcode.com/problems/contains-duplicate/
 
 func containsDuplicate(nums []int) bool {
 	//declare and assign boolean to value of false

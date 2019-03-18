@@ -7,6 +7,7 @@ func main() {
 	fmt.Println(singleNumber(nums))
 }
 
+//original problem: https://leetcode.com/problems/single-number/
 
 func singleNumber(nums []int) int {
 	

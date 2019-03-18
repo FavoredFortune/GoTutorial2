@@ -16,6 +16,8 @@ func main() {
 	
 }
 
+//Original problem https://leetcode.com/problems/reverse-string/
+
 func reverseString(s []byte) []byte {
 
 	//declare and assign the variables for going through the array from both ends
