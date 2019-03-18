@@ -6,6 +6,8 @@ import (
 	"math"
 )
 
+//Original problem: https://leetcode.com/problems/reverse-integer/
+
 func main() {
 
 	testIntP := 4345
