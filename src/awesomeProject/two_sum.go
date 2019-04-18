@@ -15,6 +15,7 @@ func main() {
 	target3 := 6
 	fmt.Println(twoSum(nums3, target3))
 }
+//original problem in leetcode: https://leetcode.com/problems/two-sum/
 
 func twoSum(nums []int, target int) []int {
 	
