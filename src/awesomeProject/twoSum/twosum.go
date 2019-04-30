@@ -15,7 +15,7 @@ package twoSum
 
 // solution on 30 April 2019
 func TwoSum(nums []int, target int)[]int{
-	result := []int{}
+	var result []int
 	if len(nums) < 1{
 		return nums
 	}
