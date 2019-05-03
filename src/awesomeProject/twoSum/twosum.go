@@ -1,6 +1,7 @@
 package twoSum
 
 // solution in March 2019
+// 40 ms	2.9 MB
 //func twoSum(nums []int, target int) []int {
 //
 //	for i := 0; i < len(nums); i ++ {
@@ -14,6 +15,7 @@ package twoSum
 //}
 
 // solution on 30 April 2019
+// 36 ms	3 MB
 func TwoSum(nums []int, target int)[]int{
 	var result []int
 	if len(nums) < 1{
