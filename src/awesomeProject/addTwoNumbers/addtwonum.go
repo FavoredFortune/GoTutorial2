@@ -5,9 +5,10 @@ type ListNode struct{
 	Next *ListNode
 }
 
+// help with how to move/create nodes in go with https://blog.csdn.net/a32521500/article/details/77650467
+
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	
-	result := &ListNode{}
+	result := &ListNode{0, nil}
 	current := result
 	carry := 0
 	
@@ -23,23 +24,14 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			sum += l2.Val
 			l2 = l2.Next
 		}
+		
+		carry = sum /10
+		current.Next = new(ListNode)
+		current.Next.Val = sum %10
+		current = current.Next
 	
 	}
 	
-	return &result
+	return result.Next
 }
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	result := &ListNode{Val: 0}
-	
-	for l1.Next !=nil || l2.Next !=nil {
-		sum := l1.Val + l2.Val
-		a := sum / 10
-		result.Next = &ListNode{Val: a}
-		result = result.Next
-		l1 = l1.Next
-		l2 = l2.Next
-	}
-	
-	return result
-}
