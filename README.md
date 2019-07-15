@@ -10,7 +10,7 @@ problem, problem domain detail and links to both the solution and tests.
     * [Problem](https://leetcode.com/problems/two-sum/)
     * *Problem summary:* Given an array of integers, return indices of the two numbers such that they add up to a 
     specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.
-    * [Solution](/src/twoSum/twosum.go)
+    * [Solution](./src/awesomeProject/twoSum/twosum.go)
     * [Tests](twoSum/twosum_test.go) 
     
 2. **Add Two Numbers**
