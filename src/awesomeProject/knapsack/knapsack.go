@@ -93,12 +93,11 @@ func readFile(csv string) (* []Item ,error ){
 	
 	if len(knapsack) < 1 {
 		return nil, fmt.Errorf("file data appears to be incomplete")
-		os.Exit(1)
 	}
 	return &knapsack, nil
 }
 
-func main() ([]Item, error){
+func Knapsack() ([]Item, error){
 	
 	if len(os.Args) != 2 {
 		fmt.Printf("Provide Knapsack CSV file with file path: %s <input_file>\n",
