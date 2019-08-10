@@ -1,4 +1,4 @@
-package knapsack
+package main
 
 import (
 	"bufio"
@@ -95,65 +95,65 @@ func readFile(csv string) (*[]Item, error) {
 	return &knapsack, nil
 }
 
-func Knapsack() ([]Item, error) {
-
+func main() {
+	
 	if len(os.Args) != 2 {
 		fmt.Printf("Provide Knapsack CSV file with file path: %s <input_file>\n",
 			path.Base(os.Args[0]))
 		os.Exit(0)
 	}
-
+	
 	store, err := readFile(os.Args[1])
-
+	
 	if err != nil {
-		return nil, err
+		fmt.Printf("%s", err.Error())
 	}
-
+	
 	fmt.Println("list of goods to choose from: ")
 	for _, v := range *store {
 		fmt.Println(" ", v)
 	}
-
+	
 	if len(os.Args) != 1 {
 		fmt.Printf("Provide empty knapsack weight(g): %s")
 		os.Exit(0)
 	}
 	answer := bufio.NewReader(os.Stdin)
-
+	
 	line, err := answer.ReadString('\n')
 	if err != nil {
-		return nil, err
+		fmt.Printf("%s", err.Error())
 	}
-
+	
 	knapsackWeight, err := strconv.Atoi(line)
 	if err != nil {
-		return nil, err
+		fmt.Printf("%s", err.Error())
 	}
-
+	
 	if len(os.Args) != 1 {
 		fmt.Printf("Provide max capacity knapsack can carry(g): %s")
 		os.Exit(0)
 	}
-
+	
 	response := bufio.NewReader(os.Stdin)
-
-	cap, err := response.ReadString('\n')
+	
+	capacity, err := response.ReadString('\n')
 	if err != nil {
-		return nil, err
+		fmt.Printf("%s", err.Error())
 	}
-
-	knapsackCapacity, err := strconv.Atoi(cap)
+	
+	knapsackCapacity, err := strconv.Atoi(capacity)
 	if err != nil {
-		return nil, err
+		fmt.Printf("%s", err.Error())
 	}
-
+	
 	mostItems, err := maxItemsOnly(knapsackWeight, knapsackCapacity, *store)
-
+	
 	if err != nil {
-		return nil, err
+		fmt.Printf("%s", err.Error())
 	}
-
-	return mostItems, nil
+	
+	fmt.Printf("here is the most items for your bag %v", mostItems)
 }
 
 func maxItemsOnly(knapsackWeight int, knapsackCapacity int, store []Item) ([]Item, error) {
