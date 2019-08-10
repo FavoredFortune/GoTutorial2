@@ -1,5 +1,5 @@
-Item,Worth,Weight(g)
-map,38,150
+Item,Worth,Weight
+map,38,10
 compass,39,35
 water,40,200
 sandwich,35,160
@@ -13,14 +13,13 @@ camera,36,30
 T-shirt,18,15
 trousers,10,10
 umbrella,4,40
-waterproof trousers,28,70
-waterproof overclothes,33,75
+waterproof-clothes,28,70
 note-case,11,80
 hat,26,20
 towel,17,12
 socks,3,50
-Innergie PocketCell USB-C 6000mAh power bank,13,148
-Deuter First Aid Kit Active,29,144
-Petzl E+LITE Emergency Headlamp,8,27
-BlitzWolf Bluetooth Tripod/Monopod,1,150
-Humangear GoBites Duo,3,22
+power-bank,13,148
+first-aid,29,144
+headlamp,8,27
+tripod,1,150
+powerbars,3,22

@@ -63,7 +63,11 @@ func readFile(csv string) (*[]Item, error) {
 	if err != nil {
 		return nil, fmt.Errorf("unable to open file")
 	}
-	defer open.Close()
+	defer  func(){
+	err = open.Close()
+	if err !=nil {
+		 fmt.Printf("THIS IS BROKEN %s", err.Error())
+	}}()
 
 	var knapsack []Item
 
@@ -73,25 +77,29 @@ func readFile(csv string) (*[]Item, error) {
 		if len(line) > 0 && (line[0] == ';' || line[0] == '#') {
 			continue
 		}
+		
 		fields := strings.Fields(line)
-
 		if len(fields) != 3 {
 			return nil, fmt.Errorf("data file not in correct format")
 		}
+		
 		worth, err := strconv.Atoi(fields[1])
 		if err != nil {
 			return nil, fmt.Errorf("unable to read file data")
 		}
+		
 		weight, err := strconv.Atoi(fields[2])
 		if err != nil {
 			return nil, fmt.Errorf("unable to read file data")
 		}
+		
 		knapsack = append(knapsack, Item{Name: fields[0], Worth: worth, Weight: weight})
 	}
 
 	if len(knapsack) < 1 {
 		return nil, fmt.Errorf("file data appears to be incomplete")
 	}
+	
 	return &knapsack, nil
 }
 
@@ -104,15 +112,16 @@ func main() {
 	}
 	
 	store, err := readFile(os.Args[1])
-	
 	if err != nil {
-		fmt.Printf("%s", err.Error())
+		fmt.Printf("BAD JOB %s", err.Error())
 	}
 	
-	fmt.Println("list of goods to choose from: ")
-	for _, v := range *store {
-		fmt.Println(" ", v)
-	}
+	//fmt.Println("list of goods to choose from: ")
+	//for _, v := range *store {
+	//	fmt.Println(" ", v)
+	//}
+	
+	_, _ = fmt.Printf("file read")
 	
 	if len(os.Args) != 1 {
 		fmt.Printf("Provide empty knapsack weight(g): %s")
@@ -122,12 +131,12 @@ func main() {
 	
 	line, err := answer.ReadString('\n')
 	if err != nil {
-		fmt.Printf("%s", err.Error())
+		fmt.Printf(" SO STRANGE  %s", err.Error())
 	}
 	
 	knapsackWeight, err := strconv.Atoi(line)
 	if err != nil {
-		fmt.Printf("%s", err.Error())
+		fmt.Printf("WEIRDO %s", err.Error())
 	}
 	
 	if len(os.Args) != 1 {
