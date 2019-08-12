@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"path"
 	"sort"
 	"strconv"
 	"strings"
@@ -54,9 +53,9 @@ type Item struct {
 	Weight int
 }
 
-func (i *Item) String() string {
-	return fmt.Sprintf("%-10s $%10,2f $%10,2f g", i.Name, i.Worth, i.Weight)
-}
+//func (i *Item) String() string {
+//	return fmt.Sprintf("%-10s $%10,2f $%10,2f g", i.Name, i.Worth, i.Weight)
+//}
 
 func readFile(csv string) (*[]Item, error) {
 	open, err := os.Open(csv)
@@ -105,80 +104,99 @@ func readFile(csv string) (*[]Item, error) {
 
 func main() {
 	
-	if len(os.Args) != 2 {
-		fmt.Printf("Provide Knapsack CSV file with file path: %s <input_file>\n",
-			path.Base(os.Args[0]))
-		os.Exit(0)
-	}
-	
-	store, err := readFile(os.Args[1])
-	if err != nil {
-		fmt.Printf("BAD JOB %s", err.Error())
-	}
-	
-	//fmt.Println("list of goods to choose from: ")
-	//for _, v := range *store {
-	//	fmt.Println(" ", v)
+	//if len(os.Args) != 2 {
+	//	fmt.Printf("Provide Knapsack CSV file with file path: %s <input_file>\n",
+	//		path.Base(os.Args[0]))
+	//	os.Exit(0)
+	//}
+	//
+	//store, err := readFile(os.Args[1])
+	//if err != nil {
+	//	fmt.Printf("BAD JOB %s", err.Error())
+	//}
+	//
+	////fmt.Println("list of goods to choose from: ")
+	////for _, v := range *store {
+	////	fmt.Println(" ", v)
+	////}
+	//
+	//_, _ = fmt.Printf("file read")
+	//
+	//if len(os.Args) != 1 {
+	//	fmt.Printf("Provide empty knapsack weight(g): %s")
+	//	os.Exit(0)
+	//}
+	//answer := bufio.NewReader(os.Stdin)
+	//
+	//line, err := answer.ReadString('\n')
+	//if err != nil {
+	//	fmt.Printf(" SO STRANGE  %s", err.Error())
+	//}
+	//
+	//knapsackWeight, err := strconv.Atoi(line)
+	//if err != nil {
+	//	fmt.Printf("WEIRDO %s", err.Error())
+	//}
+	//
+	//if len(os.Args) != 1 {
+	//	fmt.Printf("Provide max capacity knapsack can carry(g): %s")
+	//	os.Exit(0)
+	//}
+	//
+	//response := bufio.NewReader(os.Stdin)
+	//
+	//capacity, err := response.ReadString('\n')
+	//if err != nil {
+	//	fmt.Printf("%s", err.Error())
+	//}
+	//
+	//knapsackCapacity, err := strconv.Atoi(capacity)
+	//if err != nil {
+	//	fmt.Printf("%s", err.Error())
 	//}
 	
-	_, _ = fmt.Printf("file read")
-	
-	if len(os.Args) != 1 {
-		fmt.Printf("Provide empty knapsack weight(g): %s")
-		os.Exit(0)
-	}
-	answer := bufio.NewReader(os.Stdin)
-	
-	line, err := answer.ReadString('\n')
-	if err != nil {
-		fmt.Printf(" SO STRANGE  %s", err.Error())
-	}
-	
-	knapsackWeight, err := strconv.Atoi(line)
-	if err != nil {
-		fmt.Printf("WEIRDO %s", err.Error())
+	store :=[]Item{
+		{Name: "kitten", Worth:40, Weight:240},
+		{Name: "food", Worth:38, Weight:220},
+		{Name: "water", Worth:39, Weight:120},
+		{Name: "blanket", Worth:33, Weight:80},
+		{Name: "toys", Worth:20, Weight:100},
+		{Name: "book", Worth:24, Weight:90},
+		{Name: "hat", Worth:28, Weight:30},
+		{Name: "camera", Worth:26, Weight:110},
+		{Name: "cat-food", Worth:37, Weight:160},
 	}
 	
-	if len(os.Args) != 1 {
-		fmt.Printf("Provide max capacity knapsack can carry(g): %s")
-		os.Exit(0)
-	}
+	knapsackWeight := 370
+	knapsackCapacity := 2440
 	
-	response := bufio.NewReader(os.Stdin)
-	
-	capacity, err := response.ReadString('\n')
-	if err != nil {
-		fmt.Printf("%s", err.Error())
-	}
-	
-	knapsackCapacity, err := strconv.Atoi(capacity)
-	if err != nil {
-		fmt.Printf("%s", err.Error())
-	}
-	
-	mostItems, err := maxItemsOnly(knapsackWeight, knapsackCapacity, *store)
+	mostItems, err := MaxItemsOnly(knapsackWeight, knapsackCapacity, store)
 	
 	if err != nil {
 		fmt.Printf("%s", err.Error())
 	}
 	
-	fmt.Printf("here is the most items for your bag %v", mostItems)
+	fmt.Printf("here is the most items for your bag, prioritized by worth, %v. " +
+		"remember your bag can only hold %v (g) including it's own weight %v (g)",
+		mostItems, knapsackCapacity, knapsackWeight)
 }
 
-func maxItemsOnly(knapsackWeight int, knapsackCapacity int, store []Item) ([]Item, error) {
+func MaxItemsOnly(knapsackWeight int, knapsackCapacity int, store []Item) ([]Item, error) {
 	var happySack []Item
 	totalWeight := knapsackCapacity - knapsackWeight
-
+	fmt.Println(totalWeight)
 	// sort by worth first with highest at front
 	sort.Slice(store, func(i, j int) bool {
 		return store[i].Worth > store[j].Worth
 	})
-
+	fmt.Println(store)
 	//sort by weight with lightest at front
 	for _, i := range store {
-		if totalWeight+i.Weight <= knapsackCapacity {
+		if totalWeight- i.Weight > 0 {
 			happySack = append(happySack, i)
-			totalWeight += i.Weight
+			totalWeight -= i.Weight
+			fmt.Println(totalWeight)
+			fmt.Println(happySack)
 		}
 
 	}
