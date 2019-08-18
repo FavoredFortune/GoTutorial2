@@ -90,3 +90,8 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
    * LeetCode Solution Results:
      * _Runtime:_ 656 ms, faster than 52.02% of Go online submissions for Reverse String.
      * _Memory Usage:_ 8.7 MB, less than 75.00% of Go online submissions for Reverse String.
+
+### Sort List ###
+   * [Problem](https://leetcode.com/problems/sort-list/)
+   * Level: Medium
+   
