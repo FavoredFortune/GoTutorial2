@@ -84,17 +84,13 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
       _Memory Usage:_ 2.2 MB, less than 20.00% of Go online submissions for Reverse Integer.
       
 344. **Reverse String**
-
     * [Problem](https://leetcode.com/problems/reverse-string/)
     * Level: Easy
-    * *Problem summary:* Write a function that reverses a string. The input string is given as an array of characters char[].
-                         
+    * *Problem summary:* Write a function that reverses a string. The input string is given as an array of characters char[].             
      Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.   
      You may assume all the characters consist of printable ascii characters.
     * [Solution](./src/awesomeProject/reverseString/reverse_strings.go)
-    
     * [Tests](./src/awesomeProject/reverseString/reverse_strings_test.go)
-    
     * LeetCode Solution Results:
       _Runtime:_ 656 ms, faster than 52.02% of Go online submissions for Reverse String.
       _Memory Usage:_ 8.7 MB, less than 75.00% of Go online submissions for Reverse String.
