@@ -6,7 +6,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
 **NOTE:** please run in Terminal from within package directory with command`go test` to quikly run tests or `go 
     test -v` to see more detailed tests and results or `go test -cover` to see % coverage from tests of method
 
-###1.  **Two Sum**
+###1.  **Two Sum**###
    * [Problem](https://leetcode.com/problems/two-sum/)
    * Level: Easy
    * *Problem summary:* Given an array of integers, return indices of the two numbers such that they add up to a 
@@ -17,7 +17,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
         * _Runtime:_ 36 ms, faster than 32.80% of Go online submissions for Two Sum.
         * _Memory Usage:_ 3 MB, less than 100.00% of Go online 
     
-###2. **Add Two Numbers**
+###2. **Add Two Numbers**###
    * [Problem](https://leetcode.com/problems/add-two-numbers/)
    * Level: Medium
    * *Problem summary:* You are given two non-empty linked lists representing two non-negative integers. The digits 
