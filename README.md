@@ -23,6 +23,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
    * *Problem summary:* You are given two non-empty linked lists representing two non-negative integers. The digits 
     are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as 
     a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
    * [Solution](./src/awesomeProject/addTwoNumbers/addtwonum.go)
    * [Tests](./src/awesomeProject/addTwoNumbers/addtwonum_test.go) 
    * Leetcode Solution Results:
@@ -44,6 +45,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
    * LeetCode Solution Results:
       * _Runtime_: 16 ms, faster than 13.92% of Go online submissions for Find the Duplicate Number.
       * _Memory Usage:_ 4.8 MB, less than 100.00% of Go online submissions for Find the Duplicate Number.
+
       
 ###217. **Contains Duplicate**
    * [Problem](https://leetcode.com/problems/contains-duplicate/)
@@ -67,6 +69,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
       * _Runtime:_ 56 ms, faster than 31.40% of Go online submissions for Remove Duplicates from Sorted Array.
       * _Memory Usage:_ 7.6 MB, less than 38.46% of Go online submissions for Remove Duplicates from Sorted Array.
       
+
 ###7. **Reverse Integer**
    * [Problem](https://leetcode.com/problems/reverse-integer/)
    * Level: Easy
@@ -81,9 +84,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
    * [Problem](https://leetcode.com/problems/reverse-string/)
    * Level: Easy
    * *Problem summary:* Write a function that reverses a string. The input string is given as an array of characters char[].
-                         
-     Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-                         
+     Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory
      You may assume all the characters consist of printable ascii characters.
    * [Solution](./src/awesomeProject/reverseString/reverse_strings.go)
    * [Tests](./src/awesomeProject/reverseString/reverse_strings_test.go)
