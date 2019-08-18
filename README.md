@@ -6,7 +6,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
 **NOTE:** please run in Terminal from within package directory with command`go test` to quikly run tests or `go 
     test -v` to see more detailed tests and results or `go test -cover` to see % coverage from tests of method
 
-###1.  **Two Sum**###
+### 1.  **Two Sum** ###
    * [Problem](https://leetcode.com/problems/two-sum/)
    * Level: Easy
    * *Problem summary:* Given an array of integers, return indices of the two numbers such that they add up to a 
@@ -17,7 +17,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
         * _Runtime:_ 36 ms, faster than 32.80% of Go online submissions for Two Sum.
         * _Memory Usage:_ 3 MB, less than 100.00% of Go online 
     
-###2. **Add Two Numbers**###
+### 2. **Add Two Numbers** ###
    * [Problem](https://leetcode.com/problems/add-two-numbers/)
    * Level: Medium
    * *Problem summary:* You are given two non-empty linked lists representing two non-negative integers. The digits 
@@ -30,7 +30,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
       * _Runtime:_ 16 ms, faster than 21.14% of Go online submissions for Add Two Numbers.
       * _Memory Usage:_ 5 MB, less than 51.22% of Go online submissions for Add Two Numbers.
         
-###287. **Find the Duplicate Number**
+### 287. **Find the Duplicate Number** ###
    * [Problem](https://leetcode.com/problems/find-the-duplicate-number/)
    * Level: Medium
    * *Problem summary:* Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
@@ -47,7 +47,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
       * _Memory Usage:_ 4.8 MB, less than 100.00% of Go online submissions for Find the Duplicate Number.
 
       
-###217. **Contains Duplicate**
+### 217. **Contains Duplicate** ###
    * [Problem](https://leetcode.com/problems/contains-duplicate/)
    * Level: Easy
    * *Problem summary:* Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
@@ -57,7 +57,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
       * _Runtime:_ 24 ms, faster than 49.80% of Go online submissions for Contains Duplicate.
       * _Memory Usage:_ 9.2 MB, less than 25.00% of Go online submissions for Contains Duplicate.
       
-###26. **Remove Duplicates from Sorted Array**
+### 26. **Remove Duplicates from Sorted Array** ###
    * [Problem](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
    * Level: Easy
    * *Problem summary:* Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
@@ -70,7 +70,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
       * _Memory Usage:_ 7.6 MB, less than 38.46% of Go online submissions for Remove Duplicates from Sorted Array.
       
 
-###7. **Reverse Integer**
+### 7. **Reverse Integer** ###
    * [Problem](https://leetcode.com/problems/reverse-integer/)
    * Level: Easy
    * *Problem summary:* Given a 32-bit signed integer, reverse digits of an integer.
@@ -80,7 +80,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
      * _Runtime:_ 0 ms, faster than 100.00% of Go online submissions for Reverse Integer.
       * _Memory Usage:_ 2.2 MB, less than 20.00% of Go online submissions for Reverse Integer.
       
-###344. **Reverse String**
+### 344. **Reverse String** ###
    * [Problem](https://leetcode.com/problems/reverse-string/)
    * Level: Easy
    * *Problem summary:* Write a function that reverses a string. The input string is given as an array of characters char[].
