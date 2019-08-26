@@ -95,4 +95,18 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
 ### Sort List ###
    * [Problem](https://leetcode.com/problems/sort-list/)
    * Level: Medium
-   
+
+# Other Data Structure & Algorithm Problem Solving
+
+### Binary Search
+* Chose to create various functions related to binary search including:
+    * Verifying a slice/array is a binary sorted 
+structure (boolean)
+    * Finding the index of an element in a slice of a binary sorted slice (int)
+    * Finding the index value of where a new value would belong in a binary sorted slice (int)
+    * Inserting a value into a sorted slice in the correct location
+    
+     * _To Be Completed_ sort a slice
+ * [Solution](./src/awesomeProject/binarySearch/binary_search.go)
+  * [Tests](./src/awesomeProject/binarySearch/binary_search_test.go)
+
