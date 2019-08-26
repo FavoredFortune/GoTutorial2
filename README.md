@@ -1,9 +1,9 @@
 # LeetCode - Golang Edition
 
-A repo for my Go approaches to Leetcode and other problems. Each problem is listed here with a ink to original 
+A repo for my Go approaches to Leetcode and other problems. Each problem is listed here with a link to original 
 problem detail (leetcode or otherwise) , problem domain detail and links to both the solution and tests.
 
-**NOTE:** please run in Terminal from within package directory with command`go test` to quikly run tests or `go 
+**NOTE:** please run in Terminal from within package directory with command`go test` to quickly run tests or `go 
     test -v` to see more detailed tests and results or `go test -cover` to see % coverage from tests of method
 
 ### 1.  **Two Sum** ###
@@ -95,7 +95,7 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
 ### Sort List ###
    * [Problem](https://leetcode.com/problems/sort-list/)
    * Level: Medium
- 
+
 # Other Data Structure & Algorithm Problem Solving
 
 ### Binary Search
@@ -109,4 +109,4 @@ structure (boolean)
      * _To Be Completed_ sort a slice
  * [Solution](./src/awesomeProject/binarySearch/binary_search.go)
   * [Tests](./src/awesomeProject/binarySearch/binary_search_test.go)
-    
+
