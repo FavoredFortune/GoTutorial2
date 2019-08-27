@@ -1,3 +1,10 @@
+# Instructions
+
+* To run tests:
+    * copy repo locally 
+    *`cd` into package of interest (example: `cd bucketSort`)
+    * run `go test -v` for verbose running of tests with any system out print lines, etc.
+
 # LeetCode - Golang Edition
 
 A repo for my Go approaches to Leetcode and other problems. Each problem is listed here with a link to original 
@@ -107,6 +114,12 @@ structure (boolean)
     * Inserting a value into a sorted slice in the correct location
     
      * _To Be Completed_ sort a slice
- * [Solution](./src/awesomeProject/binarySearch/binary_search.go)
-  * [Tests](./src/awesomeProject/binarySearch/binary_search_test.go)
 
+* [Solution](./src/awesomeProject/binarySearch/binary_search.go)
+* [Tests](./src/awesomeProject/binarySearch/binary_search_test.go)
+
+### Bucket Sort
+* Receiving a slice with only positive integers from 0 - 99, return a sorted slice. Duplicates are allowed.
+* [Solution](./src/awesomeProject/bucketSort/bucket_sort.go)
+* [Tests](./src/awesomeProject/bucketSort/bucket_sort_test.go)
+   
