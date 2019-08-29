@@ -123,3 +123,10 @@ structure (boolean)
 * [Solution](./src/awesomeProject/bucketSort/bucket_sort.go)
 * [Tests](./src/awesomeProject/bucketSort/bucket_sort_test.go)
    
+   
+## Product Array
+* Given an array of integers return an array of products of all elements in that array, excluding the value at that 
+index.
+* [Solution](./src/awesomeProject/arrayProduct/array_product.go) // not all test cases passing yet
+* [Tests](./src/awesomeProject/arrayProduct/array_product_test.go)// not all test cases passing yet
+* _To Be Completed_
