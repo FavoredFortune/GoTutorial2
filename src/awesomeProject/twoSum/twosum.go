@@ -32,3 +32,26 @@ func TwoSum(nums []int, target int)[]int{
 	}
 	return result
 }
+
+// so simple brute force way
+// take each element and add it to the next element and test the value against the target
+// if the resulting value  equals target return those two indicies in a new slice
+// NEED TWO TRACKERS
+
+
+func twoSum2(nums []int, target int) []int {
+	result :=[]int{}
+
+	for i := 0; i<len(nums)-1 ; i ++ {
+
+		for j:= i+1 ; j< len(nums); j++ {
+			
+			if target == nums[i] + nums[j]{
+				result = append(result, i, j)
+				return result
+			}
+		}
+		
+	}
+	return result
+}

@@ -98,6 +98,17 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
    * LeetCode Solution Results:
      * _Runtime:_ 656 ms, faster than 52.02% of Go online submissions for Reverse String.
      * _Memory Usage:_ 8.7 MB, less than 75.00% of Go online submissions for Reverse String.
+     
+### 242. **Valid Anagram** ###
+   * [Problem](https://leetcode.com/problems/valid-anagram/)
+   * Level: Easy
+   * *Problem summary:* Given two strings s and t , write a function to determine if t is an anagram of s. What if 
+   the inputs contain unicode characters? How would you adapt your solution to such case?
+    
+     **NOTE** Solution is for unicode characters
+   * [Solution](./src/awesomeProject/validAnagram/valid_anagram.go)
+   * [Tests](./src/awesomeProject/validAnagram/valid_anagram_test.go)
+   * LeetCode Solution Results - nothing to crow about
 
 ### Sort List ###
    * [Problem](https://leetcode.com/problems/sort-list/)
@@ -124,7 +135,7 @@ structure (boolean)
 * [Tests](./src/awesomeProject/bucketSort/bucket_sort_test.go)
    
    
-## Product Array
+### Product Array
 * Given an array of integers return an array of products of all elements in that array, excluding the value at that 
 index.
 * [Solution](./src/awesomeProject/arrayProduct/array_product.go) // not all test cases passing yet
