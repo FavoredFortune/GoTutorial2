@@ -16,25 +16,29 @@ func arrayProduct(input []int) []int{
 	}
 	var result []int
 	temp := 1
+	var zeroTracker int
 	
 	for _, v := range input {
 		if v == 0 {
-			v = 1
+			zeroTracker ++
 		}
-		temp = temp * v
+		if v != 0 {
+			temp = temp * v
+		}
 	}
 	
 	var product int
-	// doesn't pass multiple - value input array yet
 	for _, v := range input {
-		if v == 0 {
+		if zeroTracker > 1{
+			result = append(result, 0)
+		} else if v == 0 && zeroTracker == 1 {
 			result = append(result, temp)
-			temp = 0
+		} else if v != 0 && zeroTracker >= 1{
+			result = append(result, 0)
 		} else {
 			product = temp / v
 			result = append(result, product)
 		}
 	}
-	
 	return result
 }

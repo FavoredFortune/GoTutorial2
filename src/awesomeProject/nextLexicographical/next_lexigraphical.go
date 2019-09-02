@@ -1,4 +1,4 @@
-package nextLexigraphical
+package nextLexicographical
 
 // find the next lexigraphical integer in the sequence
 // input can be negative or positive
