@@ -119,6 +119,14 @@ problem detail (leetcode or otherwise) , problem domain detail and links to both
    * LeetCode Solution Results:
      *Runtime: 28 ms, faster than 18.96% of Go online submissions for Missing Number.
       Memory Usage: 6.7 MB, less than 100.00% of Go online submissions for Missing Number.
+      
+### 9. **Palidrome Number**
+   * [Problem](https://leetcode.com/problems/palindrome-number/)
+   * Level: Easy
+   * Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+   * [Solution](./src/awesomeProject/palindromeNumber/palindrome_num.go)
+   * [Tests](./src/awesomeProject/palindromeNumber/palindrome_num_test.go)
+   * LeetCode Solution Results - nothing to crow about
 
 ### Sort List ###
    * [Problem](https://leetcode.com/problems/sort-list/)
